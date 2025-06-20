@@ -1,0 +1,19 @@
+local x = @enum{
+  one = 0,
+  two,
+  three,
+  count
+}
+
+## static_assert(x.value.fields.count.index == 4)
+
+local Y = @record{
+  x: enum{
+    one = 0,
+    two,
+    three,
+    count
+  }
+}
+
+## static_assert(Y.value.fields.x.type.fields.count.index == 4)
