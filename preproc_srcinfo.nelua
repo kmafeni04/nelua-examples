@@ -1,0 +1,9 @@
+local current_file = #[srcloc.srcname]#
+local current_line = #[srcloc.lineno]#
+
+-- variable specific
+local x: uinteger = 10
+##[[
+  print(x.node:location().lineno)
+  print(x.node:location().srcname)
+]]
